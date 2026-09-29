@@ -1,7 +1,13 @@
 # in-class-activities
 ## Devlogs
 ### W1
-Write your W1 activity Devlog here.
+
+1. After the camera is no longer a child of the cat, the camera will not going to follow the cat anymore. 
+This is because the moving script is attach on the cat, which only allow the cat and its children to move. 
+So as long as the camera isn't the child of cat, the moving script will not be able to controll the camera. 
+
+2. https://wdmd24.itch.io/class-act-1
+
 
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.

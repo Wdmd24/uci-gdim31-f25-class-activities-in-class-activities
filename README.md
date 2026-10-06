@@ -12,6 +12,12 @@ So as long as the camera isn't the child of cat, the moving script will not be a
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
 
+1. This is because r, g and b are the value between 0.0 to 1.0, using float will be the best way to represent them. 
+
+2. Since the bounce can be best illustrate by integer, using int will be the best way.
+
+3. Since it loss a semicolon, which creartes a error.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

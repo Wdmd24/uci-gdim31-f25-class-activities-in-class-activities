@@ -18,6 +18,23 @@ Create future Devlog sub-headers with the three # symbols, then write your Devlo
 
 3. Since it loss a semicolon, which creartes a error.
 
+
+### W3
+In class Activiy1
+1. public String GetResponse (int friendship_level){}
+
+2. public void SetLightDimness (float sanity){}
+
+3. public bool DidPlayerHitBeat (float timing){} 
+
+In class Activity2
+1. Suppose the class is a human, the component will be that human's orgin like heart, brain whatever. 
+
+
+In class Activity3
+
+1. Everytime they bounce, the method 'OnCollisionEnter2D' will be activate for once. In it, the speed of ball will increase and method GetColorMultiplier will be activated for once as well. As long as the average speed is larger than  _speedThreshold, GetColorMultiplier will return 1.5f. this value will times the color of ballRenderer, which causes the color to be brighter (Since when r, g and b increase, the object's color will be closer to white). So if the balls bounce for too many times, their color will be very bright.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

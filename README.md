@@ -35,6 +35,14 @@ In class Activity3
 
 1. Everytime they bounce, the method 'OnCollisionEnter2D' will be activate for once. In it, the speed of ball will increase and method GetColorMultiplier will be activated for once as well. As long as the average speed is larger than  _speedThreshold, GetColorMultiplier will return 1.5f. this value will times the color of ballRenderer, which causes the color to be brighter (Since when r, g and b increase, the object's color will be closer to white). So if the balls bounce for too many times, their color will be very bright.
 
+### W4
+
+In class Activity
+
+Table 7
+
+2. The cat and soccer should have rigid body. 
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

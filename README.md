@@ -43,6 +43,13 @@ Table 7
 
 2. The cat and soccer should have rigid body. 
 
+
+
+### W5 
+1.  It needs a NavMeshAgent and a Gameobject variable.
+2.  It needs a Update() and a SetDestination() in order to find the position of the mushroom.
+3.  SetDestination() method should setup a destiations for the deer and the update() will call SetDestination() in every frame, which updates the latest position of the mushroom.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

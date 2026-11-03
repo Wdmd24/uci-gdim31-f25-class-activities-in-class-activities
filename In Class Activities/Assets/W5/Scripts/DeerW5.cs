@@ -1,6 +1,20 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+
+public class DeerW5: MonoBehaviour
+{
+    public GameObject mushroom;
+    public NavMeshAgent Agent;
+
+
+    void Update()
+    {
+        Agent.SetDestination(mushroom.transform.position);
+
+    }
+}
+
 // Write your DeerW5 class in here :)
 // Hint: if you don't remember what a class is supposed to look like,
 //      maybe check out CatW5...

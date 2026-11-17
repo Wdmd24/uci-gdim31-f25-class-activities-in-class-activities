@@ -50,6 +50,10 @@ Table 7
 2.  It needs a Update() and a SetDestination() in order to find the position of the mushroom.
 3.  SetDestination() method should setup a destiations for the deer and the update() will call SetDestination() in every frame, which updates the latest position of the mushroom.
 
+
+### W8
+The code should be transform.forward instead of Vector3.forward. 
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 

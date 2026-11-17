@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MuskratW7 : MonoBehaviour
@@ -9,7 +10,7 @@ public class MuskratW7 : MonoBehaviour
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private float _jumpForce = 5.0f;
 
-    private bool _orbitMode;
+    public bool _orbitMode;
     private Transform _sphereTransform;
 
     // ------------------------------------------------------------------------
@@ -47,6 +48,9 @@ public class MuskratW7 : MonoBehaviour
         
         float leftright = Input.GetAxis("Horizontal");
         
+        transform.Rotate(0f, leftright *_rotationSpeed * Time.deltaTime,0f);
+        
+        
 
 
         // STEP 3 -------------------------------------------------------------
@@ -66,6 +70,17 @@ public class MuskratW7 : MonoBehaviour
         // The Muskrat should never play the "flying" animation while on a
         //      bubble.
 
+        if (forward == 0)
+        {
+            _animator.SetBool("running", false);
+            _animator.SetBool("flying", false);
+        }
+
+        else if(forward!= 0)
+        {
+             _animator.SetBool("running", true);
+            _animator.SetBool("flying", false);
+        }
 
         // STEP 5 -------------------------------------------------------------
     }
@@ -86,7 +101,7 @@ public class MuskratW7 : MonoBehaviour
         //      like up, left, right, or forward.
 
         float leftright = Input.GetAxis("Horizontal");
-
+        transform.Rotate(0,leftright *_rotationSpeed * Time.deltaTime,0f , Space.Self);
         // STEP 1 -------------------------------------------------------------
 
 
@@ -96,7 +111,7 @@ public class MuskratW7 : MonoBehaviour
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
+        transform.position += movement * transform.forward * _moveSpeed * Time.deltaTime;
 
         // STEP 2 -------------------------------------------------------------
 
@@ -108,7 +123,22 @@ public class MuskratW7 : MonoBehaviour
         // You may also find the absolute value method, Mathf.Abs(), helpful:
         //      https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Mathf.Abs.html
 
-        
+        if (Math.Abs(_rigidbody.linearVelocity.x) == 0 && Math.Abs(_rigidbody.linearVelocity.y) == 0 && Math.Abs(_rigidbody.linearVelocity.z) == 0)
+        {
+            _animator.SetBool("flying",false);
+            _animator.SetBool("running",false);
+        }
+        else if (Math.Abs(_rigidbody.linearVelocity.y) >= 0.4f)
+        {
+            _animator.SetBool("flying",true);
+            _animator.SetBool("running",false);
+        }
+        else if (Math.Abs(_rigidbody.linearVelocity.y) <= 0.4f)
+        {
+            _animator.SetBool("flying",false);
+            _animator.SetBool("running",true);
+        }
+
         // STEP 4 -------------------------------------------------------------
     }
 

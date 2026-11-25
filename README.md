@@ -57,6 +57,7 @@ The code should be transform.forward instead of Vector3.forward.
 
 ### W9 
 https://docs.google.com/drawings/d/1-2IHIaQdiXLRiDRT_hTV2GmxWNk5YMZFsmzGb04frVw/edit
+I've done the Player sector. 
 
 ## Open-Source Assets
 ### W1
